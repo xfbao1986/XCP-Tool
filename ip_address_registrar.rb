@@ -7,7 +7,7 @@ class IpAddressRegistrar
   # git repository
   GITREPOSITORY="**"
   REGIONS = {
-    "gi" => {
+    "region1" => {
       'ZONEFILE' => '**',
       'PTRZONEFILE' => '**',
       'PTRIDENTIFIER_START' => 'Xen virtual machines',
@@ -19,8 +19,8 @@ class IpAddressRegistrar
   def initialize(params = {})
     user = params[:user] || ENV['USER']
 
-    @region ||= 'gi'
-    @work_dir ||= ("/var/tmp/ns-dev-conf." + ENV['USER'])
+    @region ||= 'region1'
+    @work_dir ||= ("/var/tmp/dir." + ENV['USER'])
     @user = user
   end
 
